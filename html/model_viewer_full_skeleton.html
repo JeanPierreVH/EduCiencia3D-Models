@@ -3,30 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema Óseo Completo</title>
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <title>Sistema Óseo Completo (Sketchfab)</title>
     <style>
         body { margin: 0; padding: 0; overflow: hidden; background-color: #f0f0f0; }
-        model-viewer {
+        .sketchfab-container {
             width: 100vw;
             height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             background-color: #f0f0f0;
-            --poster-color: #ffffff; /* Color del póster mientras carga */
+        }
+        .sketchfab-model {
+            width: 100%; /* El iframe tomará el 100% del ancho y alto de su contenedor */
+            height: 100%;
+            border: none; /* Quita el borde por defecto del iframe */
         }
     </style>
 </head>
 <body>
-<model-viewer
-        src="https://sketchfab.com/models/337822a2d4bb43358c653dcf425e28ec/embed?autostart=0&transparent=1&ui_infos=0&ui_start=0&scrollwheel=1" alt="Sistema Óseo Completo"
-        ar
-        ar-modes="webxr scene-viewer quick-look"
-        camera-controls
-        touch-action="pan-y"
-        shadow-intensity="1"
-        autoplay
-        exposure="1"
-        environment-image="neutral"
-        camera-orbit="0deg 90deg 1m" >
-</model-viewer>
-</body>
+    <div class="sketchfab-container">
+        <iframe
+            class="sketchfab-model"
+            data-sketchfab-model="337822a2d4bb43358c653dcf425e28ec"
+            src="https://sketchfab.com/models/337822a2d4bb43358c653dcf425e28ec/embed?autostart=1&transparent=1&ui_infos=0&ui_start=0&scrollwheel=1&autospin=0.5"
+            allowfullscreen
+            mozallowfullscreen="true"
+            webkitallowfullscreen="true"
+            onmousewheel=""
+            tabindex="-1"
+        ></iframe>
+    </div>
+    </body>
 </html>
