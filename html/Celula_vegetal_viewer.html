@@ -2,18 +2,36 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Célula Vegetal (Sketchfab)</title>
+  <title>Célula Vegetal</title>
   <style>
-    body { margin: 0; }
-    .sketchfab-container { width:100vw; height:100vh; }
-  </style>
+        body { margin: 0; padding: 0; overflow: hidden; background-color: #f0f0f0; }
+        .sketchfab-container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+        .sketchfab-model {
+            width: 100%; /* El iframe tomará el 100% del ancho y alto de su contenedor */
+            height: 100%;
+            border: none; /* Quita el borde por defecto del iframe */
+        }
+    </style>
 </head>
 <body>
   <div class="sketchfab-container">
-    <iframe class="sketchfab-model"
-      src="https://sketchfab.com/models/c3535c0ad21549fea6c55b9c929ceb35/embed?autostart=1&transparent=1"
-      frameborder="0" allowfullscreen mozallowfullscreen webkitallowfullscreen>
-    </iframe>
+    <iframe
+      class="sketchfab-model"
+      data-sketchfab-model="c3535c0ad21549fea6c55b9c929ceb35"
+      src="https://sketchfab.com/models/c3535c0ad21549fea6c55b9c929ceb35/embed?autostart=1&transparent=1&ui_infos=0&ui_start=0&scrollwheel=1&autospin=0.5"
+      allowfullscreen
+      mozallowfullscreen="true"
+      webkitallowfullscreen="true"
+      onmousewheel=""
+      tabindex="-1"
+      ></iframe>
   </div>
 </body>
 </html>
